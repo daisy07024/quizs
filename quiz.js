@@ -4,54 +4,54 @@ var quiz = {
   // Q = QUESTION, O = OPTIONS, A = CORRECT ANSWER
   data: [
     {
-      q: "A very useful tool used during development and debugging for printing content to the debugger is: ",
+      q: "Q1: How is jquery usually imported into a javascript module",
       o: [
-        "1. Javascript",
-        "2. Terminal Bash",
-        "3. for loop",
-        "4. console log"
+        "1. default from 'jquery'",
+        "2. import 'jquery'",
+        "3. import $ from 'jquery'",
+        "4. import {$}from 'jquery"
       ],
-      a: 4 // arrays start with 0, so answer is 70 meters
+      a: 3 // arrays start with 0, so answer is 70 meters
     },
     {
-      q: "Q2: Commonly used data types do not include",
+      q: "Q2: What does a call to super() accomplish",
       o: [
-        "1. strings",
-        "2. booleans",
-        "3. alerts",
-        "4. numbers"
+        "1. It optmizes a function call",
+        "2. It executes a fuction a a base class",
+        "3. It overrides a base class function",
+        "4. It executes a function with highest priority"
       ],
-      a: 3
+      a: 2
     },
     {
-      q: "Q3: The condition in an if/else statement is enclosed with __________?",
+      q: "Q3: You found an error in a form's field, and you want to set its border color to red, how do you accomplish this?",
       o: [
-        "1. questions",
-        "2. curly brackets",
-        "3. parenthesis",
-        "4. square brackets"
+        "1. textField.style.bordercolor='red'",
+        "2. textField.style.borderColor='red'",
+        "3. textField.bordercolor='red'",
+        "4. textField.border-color='red'"
       ],
-      a: 3
+      a: 2
     },
     {
-      q: "A very useful tool used during development and debugging for printing content to the debugger is : ",
+      q: "Q4: Why should you avoid Javascript's eval() function when possible?",
       o: [
-        "Javascript",
-        "terminal/bash",
-        "for loops",
-        "console.log"
+        "1. It is prone to Javascript injection attacks",
+        "2. It causes poor performing code.",
+        "3. It creates an isolated scope",
+        "4. It causes slow evaluations"
       ],
-      a: 4
+      a: 1
     },
     {
-      q: "Q3: Arrays in Javascript can be used to store?",
+      q: "Q5: How would you create a JSON string from a javascript object",
       o: [
-        "1. number and strings",
-        "2. other arrays",
-        "3. booleans",
-        "4. all of the above"
+        "1. JSON.Parse(obj)",
+        "2. JSON.stringfy(obj)",
+        "3. obj.parseJSON()",
+        "4. obj.toJSON()"
       ],
-      a: 3
+      a: 2
     }
   ],
 
@@ -82,10 +82,12 @@ var quiz = {
     quiz.hWrap = document.getElementById("quizWrap");
     quiz.svp = document.createElement("div");
     quiz.svp.id = "firstpage";
+    
     quiz.hWrap.appendChild(quiz.svp);
     quiz.svp.innerHTML = quiz.w1;
-    quiz.svj = document.createElement("div");
+    quiz.svj= document.createElement("div");
     quiz.svj.id = "secondline";
+    
     quiz.hWrap.appendChild(quiz.svj);
     quiz.svj.innerHTML = quiz.w2;
 
@@ -266,11 +268,11 @@ var quiz = {
        
         let lbgetscore = document.createElement("label");
         lbgetscore.id="lbgetscoreid";
-        lbgetscore.textContent = " please enter you initial to retrieve your final score    "
+        lbgetscore.textContent = " please enter your initial to retrieve your final score    "
         quiz.hWrap.appendChild(lbgetscore);
 
     
-    quiz.sdk.style.display="none";
+        quiz.sdk.style.display="none";
         //var taskNameInput = document.querySelector("input[name='myname']").value;
         var yourini = document.createElement("input");
         yourini.name = 'myname';
